@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.getElementsByTagName("html")[0].className += " js";</script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>FAQ | Servidor GOTTA</title>
+</head>
+<body>
+<header class="cd-header flex flex-column flex-center">
+  <div class="text-component text-center">
+    <h1>Preguntas frecuentes Servidor GOTTA</h1>
+  </div>
+</header>
+
+<section class="cd-faq js-cd-faq container max-width-md margin-top-lg margin-bottom-lg">
+	<ul class="cd-faq__categories">
+		<li><a class="cd-faq__category cd-faq__category-selected truncate" href="#basics">Generalidades</a></li>
+		<li><a class="cd-faq__category truncate" href="#terminales">Terminales Virtuales</a></li>
+		<li><a class="cd-faq__category truncate" href="#space">Revisión espacio y procesos</a></li>
+	</ul> <!-- cd-faq__categories -->
+
+	<div class="cd-faq__items">
+		<ul id="basics" class="cd-faq__group">
+			<li class="cd-faq__title"><h2>Generalidades</h2></li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>¿Qué especificaciones técnicas tiene el servidor?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+            <p> 
+            	A continuación se listan sus características generales:
+            	<ul>
+							  <li>El servidor tiene instalado Ubuntu 18.04.4</li>
+							  <li>Tiene aproximadamente 32G de RAM (31.3G)</li>
+							  <li>Su procesador Intel(R) Xeon(R) CPU E5-2630 v3 @ 2.40GH</li>
+							  <li>Actualmente cuenta con 2.6T disponibles en la partición /mnt/home2</li>
+							  <li>Tiene 32 núcleos </li>
+							</ul> 
+							<img src="assets/Images/Server_spe.jpeg" alt="Espec_Image">
+							</p>
+          </div>
+				</div> <!-- cd-faq__content -->
+			</li>
+
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>¿Cómo accedo a una terminal desde mi pc personal para conectarme al servidor?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+            <p>Hay varias maneras de conectarse al servidor. Una de ellas es ingresando por medio de líneas de comando desde una terminal. Hay varias opciones para instalar terminales en Windows, aquí se listan algunas:<br>
+            	<h4>Utilizando la terminal del subsistema de Ubuntu en Windows</h4>
+            	<ol>
+            		<li>En la Windows Store se busca Ubuntu y se instala</li>
+            		<li>Hacemos clic derecho sobre Inicio y elegimos «Windows PowerShell (Administrator) y ejecutamos el siguiente comando: <em>Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux</em> </li>
+            		<li>Una vez finalizado el proceso, tenemos que reiniciar. Por defecto, está marcado que «sí», por lo que podemos reiniciar presionando Intro</li>
+            		<li>Luego que ya haya reiniciado, iniciamos Ubuntu desde el menú de aplicaciones y esperamos</li>
+            		<li>Llegado el momento, nos pedirá un nombre de usuario. Tenemos que introducirlo en minúsculas y presionar Intro.</li>
+            		<li>También nos va a pedir la contraseña. Elegimos la que queramos, y la confirmamos</li>
+            		<li>Ahora, para hacer “puente” con el servidor necesitamos instalar ssh con los siguientes comandos. <br>
+            			<em><i>sudo apt update</i></em><br>
+									<em><i>sudo apt install openssh-server</i></em><br>
+									Y debería salir lo siguiente:<br>
+									<img src="assets/Images/Terminal.png" alt="Terminal_Image" width="500"><br>
+									Después de esto le damos Y
+            		</li>
+            	</ol>
+            	<h4>Utilizando Putty</h4>
+            	También se puede utilizar la terminal de Putty. Se descarga en este <a class="Putty Web Page" href="https://www.putty.org/"> link </a>. <br>Y ya simplemente se siguen las instrucciones al ingresar el usuario, la IP, y la constraseña del servidor.
+
+            </p>
+          </div>
+				</div> <!-- cd-faq__content -->
+			</li>
+
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>¿Cómo puedo ingresar al servidor?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+            <p>La primera opción, es desde la terminar con el comando <em>ssh Usuario@IP</em>.<br>
+            La IP del servidor es 181.143.17.194, y el Usuario se los asignarán dependiendo del proyecto. Una vez se utiliza este comando, se debe ingresar la constraseña y ya se tiene acceso al servidor.
+            </p>
+          </div>
+				</div> <!-- cd-faq__content -->
+			</li>
+
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>¿Que comandos básicos debo tener en cuenta para ingresar al servidor?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+            <p>
+            	<ul>
+            	<li>cd:  Para navegar por los archivos y directorios de Linux. Requiere la ruta completa o el nombre del directorio, según el directorio de trabajo actual en el que se encuentre.</li><br>
+							<li>ls: El comando ls se usa para ver el contenido de un directorio. 
+								<ul>
+									<li>ls -a: muestra los archivos ocultos</li>
+									<li>ls -lh: muestra los archivos con información de la fecha</li>
+									<li>ls -al: lista todos los archivos y directorios con información detallada como permisos, tamaño, propietario, etc.</li>
+								</ul>
+							</li> 
+							<li>pwd: Comando para averiguar la ruta del directorio de trabajo actual (carpeta) en el que se encuentra.</li><br>
+							<li>cp: Para copiar archivos del directorio actual a un directorio diferente.</li><br>
+							<li>mv: El uso principal del comando mv es mover archivos, aunque también se puede usar para cambiar el nombre de los archivos.</li><br>
+							<li>mkdir: Para crear un nuevo directorio</li><br>
+							<li>rm: Se usa para eliminar archivos y directorios y el contenido dentro de ellos (rm -r)</li><br>
+							<li>chmod: Es otro comando de Linux, que se utiliza para cambiar los permisos de lectura, escritura y ejecución de archivos y directorios. chmod 777 FileOrFolder lo utilizamos para dar permisos de todo</li><br>
+							<li>df -lh: Ver espacio en el disco</li><br>
+							<li>htop: Es un visor de procesos y un administrador de procesos del monitor del sistema. </li><br>
+							<li>crontab -e: para ingresar a la lista de crones</li><br>
+							<li>screen: Sirve para crear “terminales virtuales”. Con-S para crear una nueva sesión, con -R para recuperar una</li><br>
+							<li>ipython3, ipython: Para abrir una consola de python</li><br>
+					</p>
+          </div>
+				</div> <!-- cd-faq__content -->
+			</li>
+		</ul> <!-- cd-faq__group -->
+
+		<ul id="terminales" class="cd-faq__group">
+			<li class="cd-faq__title"><h2>Terminales Virtuales</h2></li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>¿Cómo puedo dejar un proceso corriendo desde la terminal, en el servidor, sin necesidad de interrumpirlo si se pierde mi conexión?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+            <p> <em>Screen</em> es un comando que sirve para abrir una, o múltiples terminales virtuales, una especie de pestaña en la consola para poder dejar corriendo comandos SIN necesidad de dejar la consola abierta. Un proceso que se deje corriendo en un screen, queda directamente en el servidor, sin ningun puente con tu pc local</p>
+          </div>
+				</div> <!-- cd-faq__content -->
+			</li>
+
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>¿Cómo creo un screen?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+            <p>
+            	<ol>
+            		<li> Entro al servidor y me dirijo a la carpeta en donde tengo mi script o ejecutable:
+            			<img src="assets/Images/screen1.png" alt="screen1_Image">
+            		</li><br>
+            		<li> Una vez en la carpeta donde voy a ejecutar el comando escribo <em>screen -S NombreConElQueQuieroIdentificarElProceso</em>
+            			<img src="assets/Images/screen2.PNG" alt="screen2_Image" width="400">
+            			Y le doy enter
+									Cuando le doy enter, la consola queda limpia de comandos y ubicada en la misma carpeta en donde estaba, ahí ya quede "dentro" del screen que acabe de abrir. Ahora sí puedo ejecutar el comando que quiera:
+									<img src="assets/Images/screen3.png" alt="screen3_Image" width="500">
+								</li><br>
+            		<li>Para salirme del screen oprimo las teclas CTRL+A+D. Y debe salir el siguiente mensaje:
+            			<img src="assets/Images/screen4.PNG" alt="screen4_Image" width="500">
+            		Ahora puedo cerrar mi consola y el proceso que dejé corriendo quedó en un screen que yo llamé Corrida1_Silvi.
+            		</li><br>
+            		<li>Para volver a recuperar o abrir el screen, me conecto con el servidor de nuevo y escribo screen -R NombreConElQueLoCree y ahí debe volver a abrir el proceso que dejé corriendo. Para volverme a salir vuelvo a oprimir CTRL+A+D. Y si ya terminó de correr y deseo eliminar el screen, simplemente escribo <em>exit</em>.
+            		</li><br>
+            		<li> Si no recuerdo el nombre con el que guardé el screen. Puedo listar todos los screens que están activos en el servidor con el comando screen -ls. Por ejemplo aquí estan los screen que estan activos actualmente en el servidor:
+            			cc
+            		Y ya busco el mio.
+								Puedo abrir más de un screen y dejar corriendo diferentes cosas, se les pone diferente nombre y listo
+            		</li><br>
+            </ol></p>
+          </div>
+				</div> <!-- cd-faq__content -->
+			</li>
+		</ul> <!-- cd-faq__group -->
+
+	<ul id="space" class="cd-faq__group">
+			<li class="cd-faq__title"><h2>Revisión espacio y procesos</h2></li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>¿Cómo puedo revisar cuánta RAM hay disponible y en general el consumo de los procesos del servidor?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+            <p>
+            	Con htop.<em>htop</em> es un visor de procesos y un administrador de procesos de Ubuntu. Con este visor se muestra una lista actualizada con la frecuencia de los procesos que se ejecutan, normalmente ordenados por la cantidad de uso de la CPU, o por RAM. Cuando le damos el comando htop en el servidor, se abre la siguiente instancia:
+            			<img src="assets/Images/htop.PNG" alt="screen4_Image" width="500">
+            	En la parte superior, donde dice Mem, se muestra la cantidad de memoria RAM que se esta utilizando, y en la parte de abajo se encuentran listados todos los procesos que están corriendo, con el porcentaje de RAM y CPU que están empleando. En este <a class="cd-article-link" href="https://www.linuxfordevices.com/tutorials/linux/htop-command-in-linux"> link </a> se explica con mayor detalle los componentes de este visor. Para salir de este visor se presiona f10.
+            </p>
+          </div>
+				</div> <!-- cd-faq__content -->
+			</li>
+
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>¿Cómo puedo revisar cuánto espacio hay disponible?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+            <p>Con el comando <em>df -lh</em> puedo ver todas las particiones del sistema, su espacio disponible y la ubicación.
+							<img src="assets/Images/space.PNG" alt="space_Image" width="500">
+             El servidor tiene dos particiones de almacenamiento principales, y son aquellas señaladas con resaltador amarillo en la imagen. Cada una tiene una capacidad de 3.6T. Tal y como se puede evidenciar, actualmente la partición con más espacio disponible esta ubicada en /mnt/home2. Cuando se necesiten realizar actividades en el servidor que demanden mucho espacio, se recomienda ir revisando con este comando cuánto se esta consumiendo, y así identificar si necesito trasladar mis datos o mi proceso, a la partición con más espacio disponible.</p>
+          </div>
+				</div> <!-- cd-faq__content -->
+			</li>
+
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>Escaneo de los pesos de los archivos y carpetas de todo el servidr</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+            <p>Para analizar el espacio en el servidor se utiliza el comando <em>ncdu</em> situados en la carpeta a partir de la cual quiera que me muestre todos los pesos de los archivos y carpetas en adelante. Una vez se termine el escaneo, se navega entre los resultados con las flechas y se sale con q </p>
+          </div>
+				</div> <!-- cd-faq__content -->
+			</li>
+		</ul> <!-- cd-faq__group -->
+	</div> <!-- cd-faq__items -->
+
+	<a href="#0" class="cd-faq__close-panel text-replace">Close</a>
+  
+  <div class="cd-faq__overlay" aria-hidden="true"></div>
+</section> <!-- cd-faq -->
+<script src="assets/js/util.js"></script> <!-- util functions included in the CodyHouse framework -->
+<script src="assets/js/main.js"></script> 
+</body>
+</html>
