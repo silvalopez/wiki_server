@@ -19,6 +19,7 @@
 		<li><a class="cd-faq__category cd-faq__category-selected truncate" href="#basics">Generalidades</a></li>
 		<li><a class="cd-faq__category truncate" href="#terminales">Terminales Virtuales</a></li>
 		<li><a class="cd-faq__category truncate" href="#space">Revisión espacio y procesos</a></li>
+		<li><a class="cd-faq__category truncate" href="#process">Procesos activos en el servidor</a></li>
 	</ul> <!-- cd-faq__categories -->
 
 	<div class="cd-faq__items">
@@ -28,44 +29,54 @@
 				<a class="cd-faq__trigger" href="#0"><span>¿Qué especificaciones técnicas tiene el servidor?</span></a>
 				<div class="cd-faq__content">
           <div class="text-component">
-            <p> 
-            	A continuación se listan sus características generales:
-            	<ul>
-							  <li>El servidor tiene instalado Ubuntu 18.04.4</li>
-							  <li>Tiene aproximadamente 32G de RAM (31.3G)</li>
-							  <li>Su procesador Intel(R) Xeon(R) CPU E5-2630 v3 @ 2.40GH</li>
-							  <li>Actualmente cuenta con 2.6T disponibles en la partición /mnt/home2</li>
-							  <li>Tiene 32 núcleos </li>
-							</ul> 
-							<img src="assets/Images/Server_spe.jpeg" alt="Espec_Image">
-							</p>
+			  <p>
+				  A continuación se listan sus características generales:
+			  <ul>
+				  <li style="margin-left:2em">El servidor tiene instalado Ubuntu 18.04.4</li>
+				  <li style="margin-left:2em">Tiene aproximadamente 32G de RAM (31.3G)</li>
+				  <li style="margin-left:2em">Su procesador Intel(R) Xeon(R) CPU E5-2630 v3 @ 2.40GH</li>
+				  <li style="margin-left:2em">Actualmente cuenta con 2.6T disponibles en la partición /mnt/home2</li>
+				  <li style="margin-left:2em">Tiene 32 núcleos </li>
+		  	  </ul>
+			<img src="assets/Images/Server_spe.jpeg" alt="Espec_Image">
+			</p>
           </div>
 				</div> <!-- cd-faq__content -->
 			</li>
 
 			<li class="cd-faq__item">
-				<a class="cd-faq__trigger" href="#0"><span>¿Cómo accedo a una terminal desde mi pc personal para conectarme al servidor?</span></a>
+				<a class="cd-faq__trigger" href="#0"><span>¿Cómo accedo a una terminal desde mi pc personal para
+					conectarme al servidor?</span></a>
 				<div class="cd-faq__content">
           <div class="text-component">
-            <p>Hay varias maneras de conectarse al servidor. Una de ellas es ingresando por medio de líneas de comando desde una terminal. Hay varias opciones para instalar terminales en Windows, aquí se listan algunas:<br>
+            <p>Hay varias maneras de conectarse al servidor. Una de ellas es ingresando por medio de líneas de comando
+				desde una terminal. Hay varias opciones para instalar terminales en Windows, aquí se listan algunas:<br>
             	<h4>Utilizando la terminal del subsistema de Ubuntu en Windows</h4>
             	<ol>
-            		<li>En la Windows Store se busca Ubuntu y se instala</li>
-            		<li>Hacemos clic derecho sobre Inicio y elegimos «Windows PowerShell (Administrator) y ejecutamos el siguiente comando: <em>Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux</em> </li>
-            		<li>Una vez finalizado el proceso, tenemos que reiniciar. Por defecto, está marcado que «sí», por lo que podemos reiniciar presionando Intro</li>
-            		<li>Luego que ya haya reiniciado, iniciamos Ubuntu desde el menú de aplicaciones y esperamos</li>
-            		<li>Llegado el momento, nos pedirá un nombre de usuario. Tenemos que introducirlo en minúsculas y presionar Intro.</li>
-            		<li>También nos va a pedir la contraseña. Elegimos la que queramos, y la confirmamos</li>
-            		<li>Ahora, para hacer “puente” con el servidor necesitamos instalar ssh con los siguientes comandos. <br>
+            		<li style="margin-left:2em">En la Windows Store se busca Ubuntu y se instala</li>
+            		<li style="margin-left:2em">Hacemos clic derecho sobre Inicio y elegimos «Windows PowerShell (Administrator) y ejecutamos el
+						siguiente comando:
+						<em>Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux</em>
+					</li>
+            		<li style="margin-left:2em">Una vez finalizado el proceso, tenemos que reiniciar. Por defecto, está marcado que «sí»,
+						por lo que podemos reiniciar presionando Intro</li>
+            		<li style="margin-left:2em">Luego que ya haya reiniciado, iniciamos Ubuntu desde el menú de aplicaciones y esperamos</li>
+            		<li style="margin-left:2em">Llegado el momento, nos pedirá un nombre de usuario. Tenemos que introducirlo en minúsculas y
+						presionar Intro.</li>
+            		<li style="margin-left:2em">También nos va a pedir la contraseña. Elegimos la que queramos, y la confirmamos</li>
+            		<li style="margin-left:2em">Ahora, para hacer “puente” con el servidor necesitamos instalar ssh con los siguientes comandos.
+						<br>
             			<em><i>sudo apt update</i></em><br>
-									<em><i>sudo apt install openssh-server</i></em><br>
-									Y debería salir lo siguiente:<br>
-									<img src="assets/Images/Terminal.png" alt="Terminal_Image" width="500"><br>
-									Después de esto le damos Y
+							<em><i>sudo apt install openssh-server</i></em><br>
+							Y debería salir lo siguiente:<br>
+							<img src="assets/Images/Terminal.png" alt="Terminal_Image" width="500"><br>
+						Después de esto le damos Y
             		</li>
             	</ol>
             	<h4>Utilizando Putty</h4>
-            	También se puede utilizar la terminal de Putty. Se descarga en este <a class="Putty Web Page" href="https://www.putty.org/"> link </a>. <br>Y ya simplemente se siguen las instrucciones al ingresar el usuario, la IP, y la constraseña del servidor.
+            	También se puede utilizar la terminal de Putty. Se descarga en este
+			  <a class="Putty Web Page" href="https://www.putty.org/"> link </a>. <br>Y ya simplemente se siguen las
+			  instrucciones al ingresar el usuario, la IP, y la constraseña del servidor.
 
             </p>
           </div>
@@ -77,37 +88,50 @@
 				<div class="cd-faq__content">
           <div class="text-component">
             <p>La primera opción, es desde la terminar con el comando <em>ssh Usuario@IP</em>.<br>
-            La IP del servidor es 181.143.17.194, y el Usuario se los asignarán dependiendo del proyecto. Una vez se utiliza este comando, se debe ingresar la constraseña y ya se tiene acceso al servidor.
+            La IP del servidor es 181.143.17.194, y el Usuario se los asignarán dependiendo del proyecto. Una vez se
+				utiliza este comando, se debe ingresar la constraseña y ya se tiene acceso al servidor.
             </p>
           </div>
 				</div> <!-- cd-faq__content -->
 			</li>
 
 			<li class="cd-faq__item">
-				<a class="cd-faq__trigger" href="#0"><span>¿Que comandos básicos debo tener en cuenta para ingresar al servidor?</span></a>
+				<a class="cd-faq__trigger" href="#0"><span>¿Que comandos básicos debo tener en cuenta para ingresar al
+					servidor?</span></a>
 				<div class="cd-faq__content">
           <div class="text-component">
             <p>
             	<ul>
-            	<li>cd:  Para navegar por los archivos y directorios de Linux. Requiere la ruta completa o el nombre del directorio, según el directorio de trabajo actual en el que se encuentre.</li><br>
-							<li>ls: El comando ls se usa para ver el contenido de un directorio. 
-								<ul>
-									<li>ls -a: muestra los archivos ocultos</li>
-									<li>ls -lh: muestra los archivos con información de la fecha</li>
-									<li>ls -al: lista todos los archivos y directorios con información detallada como permisos, tamaño, propietario, etc.</li>
-								</ul>
-							</li> 
-							<li>pwd: Comando para averiguar la ruta del directorio de trabajo actual (carpeta) en el que se encuentra.</li><br>
-							<li>cp: Para copiar archivos del directorio actual a un directorio diferente.</li><br>
-							<li>mv: El uso principal del comando mv es mover archivos, aunque también se puede usar para cambiar el nombre de los archivos.</li><br>
-							<li>mkdir: Para crear un nuevo directorio</li><br>
-							<li>rm: Se usa para eliminar archivos y directorios y el contenido dentro de ellos (rm -r)</li><br>
-							<li>chmod: Es otro comando de Linux, que se utiliza para cambiar los permisos de lectura, escritura y ejecución de archivos y directorios. chmod 777 FileOrFolder lo utilizamos para dar permisos de todo</li><br>
-							<li>df -lh: Ver espacio en el disco</li><br>
-							<li>htop: Es un visor de procesos y un administrador de procesos del monitor del sistema. </li><br>
-							<li>crontab -e: para ingresar a la lista de crones</li><br>
-							<li>screen: Sirve para crear “terminales virtuales”. Con-S para crear una nueva sesión, con -R para recuperar una</li><br>
-							<li>ipython3, ipython: Para abrir una consola de python</li><br>
+            	<li style="margin-left:2em"><strong>cd:</strong>  Para navegar por los archivos y directorios de Linux. Requiere la ruta
+					completa o el nombre del directorio, según el directorio de trabajo actual en el que se encuentre.
+				</li>
+			  	<li style="margin-left:2em"><strong> ls:</strong> El comando ls se usa para ver el contenido de un directorio.
+					<ul style="list-style-type:circle">
+						<li style="margin-left:2.3em">ls -a: muestra los archivos ocultos</li>
+						<li style="margin-left:2.3em">ls -lh: muestra los archivos con información de la fecha</li>
+						<li style="margin-left:2.3em">ls -al: lista todos los archivos y directorios con información
+							detallada como permisos, tamaño, propietario, etc.</li>
+					</ul>
+				</li>
+				<li style="margin-left:2em"><strong>pwd:</strong> Comando para averiguar la ruta del directorio de trabajo actual
+					(carpeta) en el que se encuentra.</li>
+				<li style="margin-left:2em"><strong>cp:</strong> Para copiar archivos del directorio actual a un directorio diferente.
+				</li>
+				<li style="margin-left:2em"><strong>mv:</strong> El uso principal del comando mv es mover archivos, aunque también se
+					puede usar para cambiar el nombre de los archivos.</li>
+				<li style="margin-left:2em"><strong>mkdir:</strong> Para crear un nuevo directorio</li>
+				<li style="margin-left:2em"><strong>rm:</strong> Se usa para eliminar archivos y directorios y el contenido dentro de
+					ellos (rm -r)</li>
+				<li style="margin-left:2em"><strong>chmod:</strong> Es otro comando de Linux, que se utiliza para cambiar los permisos de
+					lectura, escritura y ejecución de archivos y directorios. chmod 777 FileOrFolder lo utilizamos
+					para dar permisos de todo</li>
+				<li style="margin-left:2em"><strong>df -lh:</strong> Ver espacio en el disco</li>
+				<li style="margin-left:2em"><strong>htop:</strong> Es un visor de procesos y un administrador de procesos del monitor del
+					sistema.</li>
+				<li style="margin-left:2em"><strong>crontab -e:</strong> para ingresar a la lista de crones</li>
+				<li style="margin-left:2em"><strong>screen:</strong> Sirve para crear “terminales virtuales”. Con-S para crear una nueva
+					sesión, con -R para recuperar una</li>
+				<li style="margin-left:2em"><strong>ipython3, ipython:</strong> Para abrir una consola de python</li>
 					</p>
           </div>
 				</div> <!-- cd-faq__content -->
@@ -117,10 +141,14 @@
 		<ul id="terminales" class="cd-faq__group">
 			<li class="cd-faq__title"><h2>Terminales Virtuales</h2></li>
 			<li class="cd-faq__item">
-				<a class="cd-faq__trigger" href="#0"><span>¿Cómo puedo dejar un proceso corriendo desde la terminal, en el servidor, sin necesidad de interrumpirlo si se pierde mi conexión?</span></a>
+				<a class="cd-faq__trigger" href="#0"><span>¿Cómo puedo dejar un proceso corriendo desde la terminal,
+					en el servidor, sin necesidad de interrumpirlo si se pierde mi conexión?</span></a>
 				<div class="cd-faq__content">
           <div class="text-component">
-            <p> <em>Screen</em> es un comando que sirve para abrir una, o múltiples terminales virtuales, una especie de pestaña en la consola para poder dejar corriendo comandos SIN necesidad de dejar la consola abierta. Un proceso que se deje corriendo en un screen, queda directamente en el servidor, sin ningun puente con tu pc local</p>
+            <p> <em>Screen</em> es un comando que sirve para abrir una, o múltiples terminales virtuales, una especie de
+				pestaña en la consola para poder dejar corriendo comandos SIN necesidad de dejar la consola abierta.
+				Un proceso que se deje corriendo en un screen, queda directamente en el servidor, sin ningun puente con
+				tu pc local</p>
           </div>
 				</div> <!-- cd-faq__content -->
 			</li>
@@ -134,23 +162,29 @@
             		<li> Entro al servidor y me dirijo a la carpeta en donde tengo mi script o ejecutable:
             			<img src="assets/Images/screen1.png" alt="screen1_Image">
             		</li><br>
-            		<li> Una vez en la carpeta donde voy a ejecutar el comando escribo <em>screen -S NombreConElQueQuieroIdentificarElProceso</em>
+            		<li> Una vez en la carpeta donde voy a ejecutar el comando escribo <em>screen -S
+						NombreConElQueQuieroIdentificarElProceso</em>
             			<img src="assets/Images/screen2.PNG" alt="screen2_Image" width="400">
             			Y le doy enter
-									Cuando le doy enter, la consola queda limpia de comandos y ubicada en la misma carpeta en donde estaba, ahí ya quede "dentro" del screen que acabe de abrir. Ahora sí puedo ejecutar el comando que quiera:
+									Cuando le doy enter, la consola queda limpia de comandos y ubicada en la misma
+						carpeta en donde estaba, ahí ya quede "dentro" del screen que acabe de abrir. Ahora sí puedo
+						ejecutar el comando que quiera:
 									<img src="assets/Images/screen3.png" alt="screen3_Image" width="500">
-								</li><br>
+								</li>
             		<li>Para salirme del screen oprimo las teclas CTRL+A+D. Y debe salir el siguiente mensaje:
             			<img src="assets/Images/screen4.PNG" alt="screen4_Image" width="500">
-            		Ahora puedo cerrar mi consola y el proceso que dejé corriendo quedó en un screen que yo llamé Corrida1_Silvi.
+            		Ahora puedo cerrar mi consola y el proceso que dejé corriendo quedó en un screen que yo llamé
+						Corrida1_Silvi.
             		</li><br>
-            		<li>Para volver a recuperar o abrir el screen, me conecto con el servidor de nuevo y escribo screen -R NombreConElQueLoCree y ahí debe volver a abrir el proceso que dejé corriendo. Para volverme a salir vuelvo a oprimir CTRL+A+D. Y si ya terminó de correr y deseo eliminar el screen, simplemente escribo <em>exit</em>.
-            		</li><br>
-            		<li> Si no recuerdo el nombre con el que guardé el screen. Puedo listar todos los screens que están activos en el servidor con el comando screen -ls. Por ejemplo aquí estan los screen que estan activos actualmente en el servidor:
-            			cc
-            		Y ya busco el mio.
-								Puedo abrir más de un screen y dejar corriendo diferentes cosas, se les pone diferente nombre y listo
-            		</li><br>
+            		<li>Para volver a recuperar o abrir el screen, me conecto con el servidor de nuevo y escribo
+						screen -R NombreConElQueLoCree y ahí debe volver a abrir el proceso que dejé corriendo.
+						Para volverme a salir vuelvo a oprimir CTRL+A+D. Y si ya terminó de correr y deseo eliminar el
+						screen, simplemente escribo <em>exit</em>.
+            		</li>
+            		<li> Si no recuerdo el nombre con el que guardé el screen. Puedo listar todos los screens que están
+						activos en el servidor con el comando screen -ls. Puedo abrir más de un screen y dejar corriendo
+						diferentes cosas, se les pone diferente nombre y listo
+            		</li>
             </ol></p>
           </div>
 				</div> <!-- cd-faq__content -->
@@ -160,13 +194,23 @@
 	<ul id="space" class="cd-faq__group">
 			<li class="cd-faq__title"><h2>Revisión espacio y procesos</h2></li>
 			<li class="cd-faq__item">
-				<a class="cd-faq__trigger" href="#0"><span>¿Cómo puedo revisar cuánta RAM hay disponible y en general el consumo de los procesos del servidor?</span></a>
+				<a class="cd-faq__trigger" href="#0"><span>¿Cómo puedo revisar cuánta RAM hay disponible y en general el
+					consumo de los procesos del servidor?</span></a>
 				<div class="cd-faq__content">
           <div class="text-component">
             <p>
-            	Con htop.<em>htop</em> es un visor de procesos y un administrador de procesos de Ubuntu. Con este visor se muestra una lista actualizada con la frecuencia de los procesos que se ejecutan, normalmente ordenados por la cantidad de uso de la CPU, o por RAM. Cuando le damos el comando htop en el servidor, se abre la siguiente instancia:
+            	Con htop.<em>htop</em> es un visor de procesos y un administrador de procesos de Ubuntu. Con este visor
+				se muestra una lista actualizada con la frecuencia de los procesos que se ejecutan, normalmente
+				ordenados por la cantidad de uso de la CPU, o por RAM. Cuando le damos el comando htop en el servidor,
+				se abre la siguiente instancia:
             			<img src="assets/Images/htop.PNG" alt="screen4_Image" width="500">
-            	En la parte superior, donde dice Mem, se muestra la cantidad de memoria RAM que se esta utilizando, y en la parte de abajo se encuentran listados todos los procesos que están corriendo, con el porcentaje de RAM y CPU que están empleando. En este <a class="cd-article-link" href="https://www.linuxfordevices.com/tutorials/linux/htop-command-in-linux"> link </a> se explica con mayor detalle los componentes de este visor. Para salir de este visor se presiona f10.
+            	En la parte superior, donde dice Mem, se muestra la cantidad de memoria RAM que se esta utilizando,
+				y en la parte de abajo se encuentran listados todos los procesos que están corriendo, con el porcentaje
+				de RAM y CPU que están empleando.
+				En este <a class="cd-article-link"
+						   href="https://www.linuxfordevices.com/tutorials/linux/htop-command-in-linux">
+				link </a> se explica con mayor detalle los componentes de este visor. Para salir de este visor se
+				presiona f10.
             </p>
           </div>
 				</div> <!-- cd-faq__content -->
@@ -176,22 +220,122 @@
 				<a class="cd-faq__trigger" href="#0"><span>¿Cómo puedo revisar cuánto espacio hay disponible?</span></a>
 				<div class="cd-faq__content">
           <div class="text-component">
-            <p>Con el comando <em>df -lh</em> puedo ver todas las particiones del sistema, su espacio disponible y la ubicación.
+            <p>Con el comando <em>df -lh</em> puedo ver todas las particiones del sistema, su espacio disponible y la
+				ubicación.
 							<img src="assets/Images/space.PNG" alt="space_Image" width="500">
-             El servidor tiene dos particiones de almacenamiento principales, y son aquellas señaladas con resaltador amarillo en la imagen. Cada una tiene una capacidad de 3.6T. Tal y como se puede evidenciar, actualmente la partición con más espacio disponible esta ubicada en /mnt/home2. Cuando se necesiten realizar actividades en el servidor que demanden mucho espacio, se recomienda ir revisando con este comando cuánto se esta consumiendo, y así identificar si necesito trasladar mis datos o mi proceso, a la partición con más espacio disponible.</p>
+             El servidor tiene dos particiones de almacenamiento principales, y son aquellas señaladas con resaltador
+				amarillo en la imagen. Cada una tiene una capacidad de 3.6T. Tal y como se puede evidenciar, actualmente
+				la partición con más espacio disponible esta ubicada en /mnt/home2. Cuando se necesiten realizar
+				actividades en el servidor que demanden mucho espacio, se recomienda ir revisando con este comando
+				cuánto se esta consumiendo, y así identificar si necesito trasladar mis datos o mi proceso, a la
+				partición con más espacio disponible.</p>
           </div>
 				</div> <!-- cd-faq__content -->
 			</li>
 
 			<li class="cd-faq__item">
-				<a class="cd-faq__trigger" href="#0"><span>Escaneo de los pesos de los archivos y carpetas de todo el servidr</span></a>
+				<a class="cd-faq__trigger" href="#0"><span>Escaneo de los pesos de los archivos y carpetas de todo el
+					servidor</span></a>
 				<div class="cd-faq__content">
           <div class="text-component">
-            <p>Para analizar el espacio en el servidor se utiliza el comando <em>ncdu</em> situados en la carpeta a partir de la cual quiera que me muestre todos los pesos de los archivos y carpetas en adelante. Una vez se termine el escaneo, se navega entre los resultados con las flechas y se sale con q </p>
+			  <p>Para analizar el espacio en el servidor se utiliza el comando <em>ncdu</em> situados en la carpeta a
+				  partir de la cual quiera que me muestre todos los pesos de los archivos y carpetas en adelante.
+				  Una vez se termine el escaneo, se navega entre los resultados con las flechas y se sale con q </p>
           </div>
 				</div> <!-- cd-faq__content -->
 			</li>
 		</ul> <!-- cd-faq__group -->
+
+		<ul id="process" class="cd-faq__group">
+			<li class="cd-faq__title"><h2>Procesos activos en el servidor</h2></li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>ECMWF</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+            <p>
+				En el servidor están los archivos desde 2020-01-07.
+			  <ul>
+				  <li style="margin-left:2em">Cada archivo contiene 51 ensambles. Cada ensamble parte de datos iniciales
+					  ligeramente perturbados y evoluciona un poco diferente de los otros miembros del conjunto para dar
+					  una gama de posibles resultados de pronóstico. La variación vista en los pronósticos de cada
+					  ensamble da una indicación de la predictibilidad de la atmósfera.</li>
+				  <li style="margin-left:2em">Formato de los datos: GRIB</li>
+				  <li style="margin-left:2em">Proyección: Cylindrical Equidistant </li>
+				  <li style="margin-left:2em">Tamaño de píxel = 0.2°x 0.2°</li>
+				  <li style="margin-left:2em">Hay 3 horizontes diferentes de pronóstico disponibles:
+					  <ul style="list-style-type:circle">
+						  <li style="margin-left:2.4em"> A 6 días: Stream X - con una resolución temporal de 1 hora (de
+							  0 a 90 horas pronosticadas en adelante) y de 3 horas (de 90 a 144 horas pronosticadas en
+							  adelante).<br>
+							  La variable de precipitación pronosticada está en magnitud de lámina de
+							  agua [m].<br>
+							  Se actualizan 3 veces al día: las corridas de las 0000 UTC, 0600 UTC y 1200 UTC
+						  </li>
+						  <li style="margin-left:2.4em">A 15 días: Stream E - con una resolución
+							  temporal de 6 horas.<br>
+							  La variable de precipitación pronosticada está en magnitud de lámina
+							  de agua [m]. <br>
+							  Se actualizan 2 veces al día:  las corridas de las 0000 UTC y 1200 UTC
+						  </li>
+						  <li style="margin-left:2.4em">A 6 meses: Stream L -  con una resolución
+							  temporal mensual.<br>
+							  La variable de  precipitación pronosticada está en intensidad [m/s].<br>
+							  Se actualizan el día 5 de cada mes a las 0700hrs local.
+						  </li>
+					  </ul>
+				  </li>
+			  </ul>
+
+			  A continuación se explica de manera más detallada la convención de los nombres de los archivos y la
+			  configuración en el servidor para el procesamiento de los datos operacionales:
+			  &nbsp
+			  <h4> Convención nombre archivos ECMWF </h4>
+			  La siguiente convención de nombre de archivo de difusión se utiliza para la transmisión de productos de
+			  difusión de ECMWF:<br>
+			  <p style="text-align: center;"> <strong>ccSMMDDHHIImmddhhiiE </strong></p>
+			  Donde:<br>
+			  <ul style="list-style-type:circle">
+				<li style="margin-left:2.4em">cc es el nombre del flujo de difusión</li>
+				<li style="margin-left:2.4em">S es indicador de flujo de datos de difusión</li>
+				<li style="margin-left:2.4em">MMDDHHII es el mes, día, hora y minuto en que se basan los productos.</li>
+				<li style="margin-left:2.4em">mmddhhii es el mes, día, hora y minuto en que los productos son válidos
+				</li>
+				<li style="margin-left:2.4em">mmddhhii está configurado como "______" para los productos del Sistema de
+					Pronóstico Estacional</li>
+				<li style="margin-left:2.4em">hhii está configurado como "______" para los productos de pronóstico
+					mensual</li>
+				<li style="margin-left:2.4em">ii se establece en 1 para el tiempo de pronóstico de alta resolución
+					paso cero.</li>
+				<li style="margin-left:2.4em">E es el número de versión del experimento (como EXPVER en MARS,
+					normalmente 1)</li>
+			  </ul>
+			  En el caso de los archivos que estamos recibiendo, de acuerdo al nombre del archivo, se han identificado 3
+			  tipos:
+			  <ul>
+				  <li style="margin-left:2em">Pronóstico con horizonte de tiempo de 6 días:<br>
+					  cc = 'G1'<br>
+					  S = 'X'<br>
+					  De esta manera, todos estos archivos siempre comienzan con G1X:
+					  <strong>G1X</strong>MMDDHHIImmddhhi<strong>1</strong><br>
+				  </li>
+				  <li style="margin-left:2em">Pronóstico con horizonte de tiempo de 15 días: <br>
+					  cc = 'G1' <br>
+					  S = 'E'  <br>
+					  De esta manera, todos estos archivos siempre comienzan con G1E:
+					  <strong>G1E</strong>MMDDHHIImmddhhi<strong>1</strong><br>
+				  </li>
+				  <li style="margin-left:2em">Pronóstico con horizonte de tiempo de 7 meses:<br>
+					  cc = 'G1'<br>
+					  S = 'L'<br>
+					  De esta manera, todos estos archivos siempre comienzan con G1L: <strong>G1L</strong>MMDDHHIImm
+					  <strong>______1</strong><br>
+				  </li>
+			  </ul>
+          </div>
+				</div> <!-- cd-faq__content -->
+			</li>
+		</ul> <!-- cd-faq__group -->
+
 	</div> <!-- cd-faq__items -->
 
 	<a href="#0" class="cd-faq__close-panel text-replace">Close</a>
