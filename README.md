@@ -15,7 +15,7 @@
 # Wiki GOTTA Server
 
 ## :notebook_with_decorative_cover: &nbsp;Acerca del Proyecto
-En este repositorio podrán encontrar los scripts desarrollados para realizar los pronósticos a escala diaria y mensual para Ituango, por medio de técnicas de ML y DL. Los modelos empleados son XGBoost y LSTM.
+En este repositorio podrán encontrar la wiki del servidor de gotta ingeniería
 
 ## :file_folder: Estructura del Proyecto
 
