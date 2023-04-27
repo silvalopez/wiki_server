@@ -19,7 +19,7 @@ En este repositorio podrán encontrar la wiki del servidor de gotta ingeniería
 
 ## :file_folder: Estructura del Proyecto
 
--   📂 [assets]: GitHub template.
+-   📂 [assets]: contains the CSS and JavaScript files
 
 ## :rocket: Para empezar
 - Clonar o descargar el repositorio (se puede descargar como un ZIP)
